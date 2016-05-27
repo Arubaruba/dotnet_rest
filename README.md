@@ -11,3 +11,4 @@ Minimal Rest API with ASP.NET Core 1.0
 ## Resources
 
 * [Unit Testing in .NET Core using dotnet test](https://dotnet.github.io/docs/core-concepts/testing/unit-testing-with-dotnet-test.html)
+* [Deployment to Azure](https://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control)
