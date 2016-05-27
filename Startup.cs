@@ -10,17 +10,18 @@ namespace aspnetcoreapp
     {
         public void Configure(IApplicationBuilder app)
         {
-            app.Run(async context =>
+            app.Run(context =>
             {
-                using (var db = new BloggingContext()) {
-                    // Add a blog
-                    db.Blogs.Add(new Blog {Url = "google.com"});
-                    await db.SaveChangesAsync();
+                return context.Response.WriteAsync("asdf");
+                // using (var db = new BloggingContext()) {
+                //     // Add a blog
+                //     db.Blogs.Add(new Blog {Url = "google.com"});
+                //     await db.SaveChangesAsync();
                     
-                    // Display all blogs
-                    var query = from d in db.Blogs where d.Url != "" select d;
-                    await context.Response.WriteAsync(JsonConvert.SerializeObject(query.ToArray()));
-                }
+                //     // Display all blogs
+                //     var query = from d in db.Blogs where d.Url != "" select d;
+                //     await context.Response.WriteAsync(JsonConvert.SerializeObject(query.ToArray()));
+                // }
             });
         }
     }
